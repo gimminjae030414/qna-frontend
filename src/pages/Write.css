@@ -1,0 +1,25 @@
+.write-card { }
+.char-count-right { display: block; text-align: right; font-size: 11px; color: var(--light-text); margin-top: 4px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--mid); margin-bottom: 8px; }
+.label-hint { color: var(--light-text); font-weight: 400; }
+
+.upload-area {
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-area:hover { border-color: var(--lavender-mid); background: var(--lavender); }
+.upload-placeholder { text-align: center; padding: 32px; }
+.upload-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+.upload-placeholder p { color: var(--mid); font-size: 14px; }
+.upload-hint { color: var(--light-text) !important; font-size: 12px !important; margin-top: 4px !important; }
+.upload-preview { max-width: 100%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; }
+
+.write-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }

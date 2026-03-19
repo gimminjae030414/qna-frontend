@@ -1,0 +1,57 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.navbar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo-atom {
+  font-size: 1.6rem;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.logo-text {
+  font-family: 'Gaegu', cursive;
+  font-size: 1.5rem;
+  color: var(--dark);
+  font-weight: 700;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--mid);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.15s;
+}
+.nav-link:hover { background: var(--lavender); }
+.admin-link { color: #8040c0; }
+.nav-user {
+  font-size: 13px;
+  color: var(--light-text);
+  font-weight: 500;
+}
+.nav-btn { font-size: 13px; padding: 7px 16px; }

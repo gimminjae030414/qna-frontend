@@ -1,0 +1,58 @@
+.auth-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+}
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  padding: 44px 40px;
+  text-align: center;
+}
+.auth-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.auth-title {
+  font-family: 'Gaegu', cursive;
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.auth-sub {
+  color: var(--light-text);
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+.auth-form { text-align: left; }
+.form-group { margin-bottom: 16px; }
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mid);
+  margin-bottom: 6px;
+}
+.label-hint { color: var(--light-text); font-weight: 400; }
+.auth-btn { width: 100%; justify-content: center; padding: 13px; font-size: 15px; margin-top: 8px; }
+.auth-footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--light-text);
+}
+.auth-footer a {
+  color: var(--lavender-mid);
+  text-decoration: none;
+  font-weight: 600;
+}
+.auth-footer a:hover { text-decoration: underline; }

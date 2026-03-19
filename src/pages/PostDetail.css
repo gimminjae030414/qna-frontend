@@ -1,0 +1,54 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--mid);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.15s;
+}
+.back-link:hover { color: var(--dark); }
+
+.post-card { margin-bottom: 24px; }
+.post-header { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.post-title { font-family: 'Gaegu', cursive; font-size: 1.7rem; color: var(--dark); margin-bottom: 10px; }
+.post-meta { display: flex; gap: 16px; font-size: 13px; color: var(--light-text); }
+.post-content { font-size: 15px; line-height: 1.8; color: var(--dark); white-space: pre-wrap; margin-bottom: 16px; }
+.post-image { margin: 16px 0; border-radius: 14px; overflow: hidden; }
+.post-image img { max-width: 100%; display: block; }
+.post-actions { display: flex; justify-content: flex-end; padding-top: 12px; border-top: 1px solid var(--border); }
+
+.replies-section { margin-bottom: 24px; }
+.replies-title { font-family: 'Gaegu', cursive; font-size: 1.3rem; color: var(--dark); margin-bottom: 14px; }
+.no-replies { color: var(--mid); text-align: center; padding: 28px; font-size: 14px; }
+
+.reply-list { display: flex; flex-direction: column; gap: 12px; }
+
+.reply-item { position: relative; padding: 18px 22px; }
+.reply-admin {
+  background: linear-gradient(135deg, rgba(232,213,255,0.5), rgba(212,238,255,0.5));
+  border: 1.5px solid var(--lavender-mid);
+}
+.reply-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.reply-author { font-size: 13px; font-weight: 600; color: var(--mid); }
+.admin-badge {
+  background: linear-gradient(135deg, var(--lavender-mid), var(--sky-mid));
+  color: var(--dark);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.reply-date { font-size: 12px; color: var(--light-text); }
+.reply-content { font-size: 14px; line-height: 1.7; color: var(--dark); white-space: pre-wrap; }
+.reply-delete {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.reply-form { }
+.reply-form-title { font-family: 'Gaegu', cursive; font-size: 1.1rem; color: var(--dark); margin-bottom: 14px; }
+.reply-form-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+.char-count { font-size: 12px; color: var(--light-text); }

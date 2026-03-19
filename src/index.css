@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --sky: #d4eeff;
+  --sky-mid: #a8d8f0;
+  --lavender: #e8d5ff;
+  --lavender-mid: #c9a8f0;
+  --mint: #c9f5e8;
+  --peach: #ffd9c9;
+  --yellow: #fff3b0;
+  --white: #ffffff;
+  --dark: #3a3358;
+  --mid: #6b5f8a;
+  --light-text: #9b8fc0;
+  --border: #e0d6f5;
+  --card-shadow: 0 4px 20px rgba(100, 80, 160, 0.10);
+  --hover-shadow: 0 8px 30px rgba(100, 80, 160, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: linear-gradient(135deg, #f0f7ff 0%, #f5f0ff 50%, #fff0f7 100%);
+  min-height: 100vh;
+  color: var(--dark);
+}
+
+/* ── 공통 카드 ── */
+.card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: var(--hover-shadow); }
+
+/* ── 버튼 ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--lavender-mid), var(--sky-mid));
+  color: var(--dark);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(100,80,160,0.25); }
+
+.btn-danger {
+  background: linear-gradient(135deg, #ffb3b3, #ff8fa3);
+  color: #6b2040;
+}
+.btn-danger:hover { transform: translateY(-2px); }
+
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--border);
+  color: var(--mid);
+}
+.btn-ghost:hover { background: var(--lavender); border-color: var(--lavender-mid); }
+
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+
+/* ── 입력 ── */
+input, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  background: rgba(255,255,255,0.8);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+input:focus, textarea:focus {
+  border-color: var(--lavender-mid);
+  box-shadow: 0 0 0 3px rgba(200, 168, 240, 0.25);
+}
+
+/* ── 에러/성공 메시지 ── */
+.msg-error {
+  background: #fff0f3;
+  color: #c0394a;
+  border: 1.5px solid #ffb3be;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.msg-success {
+  background: #f0fff8;
+  color: #2a7a5a;
+  border: 1.5px solid #a0e4c8;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ── 물리 배경 장식 (파티클처럼) ── */
+.physics-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.physics-bg span {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0.12;
+  animation: floatIcon 8s ease-in-out infinite;
+}
+.physics-bg span:nth-child(1)  { top: 5%;  left: 8%;  animation-delay: 0s; }
+.physics-bg span:nth-child(2)  { top: 15%; left: 80%; animation-delay: 1s; }
+.physics-bg span:nth-child(3)  { top: 40%; left: 5%;  animation-delay: 2s; }
+.physics-bg span:nth-child(4)  { top: 60%; left: 88%; animation-delay: 0.5s; }
+.physics-bg span:nth-child(5)  { top: 80%; left: 15%; animation-delay: 3s; }
+.physics-bg span:nth-child(6)  { top: 90%; left: 70%; animation-delay: 1.5s; }
+.physics-bg span:nth-child(7)  { top: 30%; left: 50%; animation-delay: 2.5s; }
+.physics-bg span:nth-child(8)  { top: 70%; left: 40%; animation-delay: 4s; }
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-18px) rotate(10deg); }
+}
+
+/* ── 페이지 공통 래퍼 ── */
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.page-title {
+  font-family: 'Gaegu', cursive;
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── 스피너 ── */
+.spinner {
+  text-align: center;
+  padding: 60px;
+  font-size: 2rem;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
