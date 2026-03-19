@@ -1,17 +1,17 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:4000/api',
 });
 
-// 요청마다 JWT 자동 첨부
+// ?�청마다 JWT ?�동 첨�?
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
-// 401/403 응답 시 자동 로그아웃
+// 401/403 ?�답 ???�동 로그?�웃
 api.interceptors.response.use(
   (res) => res,
   (err) => {
